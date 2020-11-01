@@ -63,6 +63,9 @@
           <el-input v-model="addCateForm.cat_name"></el-input>
         </el-form-item>
         <el-form-item label="父級分類:">
+          <!-- options用來選擇數據源 -->
+          <!-- props用來指定配置對象 (不一樣) -->
+          <!-- checkStrictly可以單獨選中父級 -->
           <el-cascader
             v-model="selectedKeys"
             :options="parentCateList"
