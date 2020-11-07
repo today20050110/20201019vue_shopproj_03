@@ -276,7 +276,7 @@ export default {
         // 發起修改用戶信息的數據請求
         const { data: res } = await this.$http.put('categories/' + this.editCateForm.cat_id, { cat_name: this.editCateForm.cat_name })
         if (res.meta.status !== 200) {
-          this.$message.error('更新分類信息失敗!')
+          return this.$message.error('更新分類信息失敗!')
         }
         // 關閉對話框
         this.editCateDialogVisible = false
